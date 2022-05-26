@@ -24,6 +24,12 @@ export default function MyNoteCard({ mynote, user }) {
         <MyNoteCardShowMore mynote={mynote} />
       </div>
 
+      <Link href={`/mynotes/${mynote.id}`}>
+        <a className='my-2 w-full text-indigo-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
+          See details
+        </a>
+      </Link>
+
       <Link href={`/mynotes/edit/${mynote.id}`}>
         <a className='my-2 w-full text-indigo-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
           Update or Delete
