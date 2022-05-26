@@ -9,7 +9,9 @@ export default function BlogpostCard({ blogpost }) {
         <p className=' text-gray-500 '>
           By IceSwede | {blogpost.node.date.substr(0, 10)}
         </p>
-        <h2 className=' text-gray-600 font-bold'>{blogpost.node.name}</h2>
+        <h2 className=' text-gray-700 text-lg font-bold'>
+          {blogpost.node.name}
+        </h2>
 
         <Link href={`/blogposts/${blogpost.node.slug}`}>
           <a className='text-indigo-600'>Read more</a>

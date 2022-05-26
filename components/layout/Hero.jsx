@@ -11,7 +11,7 @@ const Hero = () => {
             Next.js App with Headless WordPress (Beta)
           </h2>
           <h1 className='text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6'>
-            Example code for CRUD operations
+            Code example for CRUD operations
           </h1>
         </div>
         <p className='text-gray-900 text-xl text-center mt-6 font-bold'>
@@ -73,9 +73,8 @@ const Hero = () => {
           </Link>
         </div>
         <p className='text-xs italic'>
-          Obs! This app will be split into two apps, one with example code for
-          ACM CRUD operations and anohter one with example code for ACM
-          Relationships{' '}
+          Obs! This app is still under development. Estimated date for release
+          of a stable version is 1 June 2022
         </p>
       </section>
 
@@ -98,9 +97,9 @@ const Hero = () => {
                     Blazingly fast! Here with the new (Next.js 12.1) On-demand
                     Incremental Static Regeneration implemented
                   </p>
-                  <Link href='/recipes'>
+                  <Link href='/blogposts'>
                     <a className='mt-3 text-indigo-600 inline-flex items-center'>
-                      See the Recipes
+                      See the Blog
                       <svg
                         fill='none'
                         stroke='currentColor'
@@ -127,25 +126,10 @@ const Hero = () => {
                     Server-side rendering
                   </h2>
                   <p className='leading-relaxed text-base'>
-                    Content always up to date while still offering great SEO.
-                    But are there use cases for SSR where Incremental Static
-                    Regeneration and/or CSR would not be a better alternative?
+                    SEO friendly and content always up to date!. The use case
+                    for this app has no space for SSR so I will include an SSR
+                    code example in another app.
                   </p>
-                  <Link href='/blogposts'>
-                    <a className='mt-3 text-indigo-600 inline-flex items-center'>
-                      See the Blog
-                      <svg
-                        fill='none'
-                        stroke='currentColor'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        className='w-4 h-4 ml-2'
-                        viewBox='0 0 24 24'>
-                        <path d='M5 12h14M12 5l7 7-7 7'></path>
-                      </svg>
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -160,9 +144,8 @@ const Hero = () => {
                     CRUD and Client-side rendering
                   </h2>
                   <p className='leading-relaxed text-base'>
-                    Create, Read, Update and Delete (CRUD) posts with
-                    Client-side rendering (CSR) using Apollo Client useQuery and
-                    useMutation hooks.
+                    Create, Read, Update and Delete (CRUD) Wp post types with
+                    using Apollo Client useQuery and useMutation hooks (CSR).
                   </p>
                   <Link href='/users/log-in'>
                     <a className='mt-3 text-indigo-600 inline-flex items-center'>
@@ -201,7 +184,7 @@ const Hero = () => {
                   </p>
                   <Link href='/users/log-in'>
                     <a className='mt-3 text-indigo-600 inline-flex items-center'>
-                      Login to check
+                      Login to test CRUD
                       <svg
                         fill='none'
                         stroke='currentColor'

@@ -7,6 +7,7 @@ export interface User {
   firstName: string;
   lastName: string;
   email: string;
+  username: string;
   capabilities: string[];
 }
 
@@ -34,6 +35,7 @@ export const GET_USER = gql`
       firstName
       lastName
       email
+      username
       capabilities
     }
   }

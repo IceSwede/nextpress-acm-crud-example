@@ -20,8 +20,8 @@ export default function MyNotes() {
           at the end of the day. The maximum number of posts per user is set to
           five.
         </p>
-        <p className='text-left mt-5 text-orange-600 text-sm '>
-          Remains todo: Filter on logged in user
+        <p className='text-left mt-5 text-indigo-700  '>
+          You are logged in as {user.username}
         </p>
         <Link href={`/mynotes/create`}>
           <a className='bg-indigo-600 text-white rounded-md my-8 py-2 px-4 flex justify-center'>
