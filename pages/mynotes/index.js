@@ -6,6 +6,7 @@ import MyNotesFetch from '@/components/mynotes/MyNotesFetch';
 
 export default function MyNotes() {
   const { user } = useAuth();
+  const isUser = Boolean(user);
 
   return (
     <main className='bg-white my-3 md:my-6 md:rounded-lg'>
@@ -20,9 +21,13 @@ export default function MyNotes() {
           at the end of the day. The maximum number of posts per user is set to
           five.
         </p>
-        <p className='text-left mt-5 text-indigo-700  '>
-          You are logged in as {user.username}
-        </p>
+        {isUser ? (
+          <p className='text-left mt-5 text-indigo-700  '>
+            You are logged in as {user.username}
+          </p>
+        ) : (
+          <p></p>
+        )}
         <Link href={`/mynotes/create`}>
           <a className='bg-indigo-600 text-white rounded-md my-8 py-2 px-4 flex justify-center'>
             Create Note

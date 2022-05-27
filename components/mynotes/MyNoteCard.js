@@ -1,10 +1,9 @@
 import Link from 'next/link';
+import useAuth from '@/hooks/useAuth';
 
-import MyNoteCardShowMore from '@/components/mynotes/MyNoteCardShowMore';
-
-export default function MyNoteCard({ mynote, user }) {
-  console.log('Hello from MyNoteCard', mynote);
-  console.log('User ', user);
+export default function MyNoteCard({ mynote }) {
+  const { user } = useAuth();
+  const isUser = Boolean(user);
 
   return (
     <div className='bg-white border-0 px-3 pt-3 rounded-md my-3 shadow-lg w-96 flex flex-col items-start justify-start mb-2'>
@@ -26,7 +25,24 @@ export default function MyNoteCard({ mynote, user }) {
             Details
           </a>
         </Link>
+        {mynote.author.node.username === user.username ? (
+          <Link href={`/mynotes/edit/${mynote.id}`}>
+            <a className='ml-2 my-2 w-full text-indigo-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
+              Update
+            </a>
+          </Link>
+        ) : (
+          <button className='ml-2 my-2 w-full text-gray-300 bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-default'>
+            Update
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
 
+/*
+Removing this to check if this causes the build error: 
         {mynote.author.node.username === user.username ? (
           <Link href={`/mynotes/edit/${mynote.id}`}>
             <a className='ml-2 my-2 w-full text-indigo-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
@@ -40,7 +56,6 @@ export default function MyNoteCard({ mynote, user }) {
             </a>
           </Link>
         )}
-      </div>
-    </div>
-  );
-}
+
+
+*/
