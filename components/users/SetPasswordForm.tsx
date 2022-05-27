@@ -65,9 +65,10 @@ export default function SetPasswordForm({ resetKey: key, login }: Props) {
   }
 
   if (wasPasswordReset) {
+    console.log('Password set');
     return (
       <>
-        <p>Your new password has been set.</p>
+        <p>Your new password has been set!</p>
         <Link href='/users/log-in'>
           <a>Log in</a>
         </Link>
@@ -113,13 +114,20 @@ export default function SetPasswordForm({ resetKey: key, login }: Props) {
             ) : null}
             {error ? <p className='error-message'>{error.message}</p> : null}
             <button
-              className='mt-2 w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center'
+              className='np-button w-full '
               type='submit'
               disabled={loading}>
-              {loading ? 'Saving...' : 'Save password'}
+              {loading ? 'Saving...' : 'Set password'}
             </button>
           </fieldset>
         </form>
+        <p className='mt-3'>
+          Return to{' '}
+          <Link href='/users/log-in'>
+            <a className='text-indigo-600 hover:underline'>Login</a>
+          </Link>{' '}
+          after setting the password
+        </p>
       </div>
     </div>
   );

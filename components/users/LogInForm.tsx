@@ -90,7 +90,7 @@ export default function LogInForm() {
               {loading ? 'Logging in...' : 'Login'}
             </button>
           </fieldset>
-          <p className='account-sign-up-message'>
+          <p className=''>
             Don&#39;t have an account yet?{' '}
             <Link href='/users/sign-up'>
               <a className='text-indigo-600 hover:underline'>Sign up</a>

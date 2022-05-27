@@ -8,7 +8,7 @@ const Hero = () => {
       <section className='w-full flex flex-1 flex-col items-center p-2 bg-white boarder rounded-t-lg'>
         <div className='w-full rounded-t-sm py-6 bg-gradient-to-r from-indigo-900 to-indigo-600'>
           <h2 className='text-white text-xl md:text-2xl lg:text3xl text-center mb-3 border-b-1'>
-            Next.js App with Headless WordPress #1 (Beta)
+            Next.js App with Headless WordPress (Beta)
           </h2>
           <h1 className='text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6'>
             Code example including CRUD operations

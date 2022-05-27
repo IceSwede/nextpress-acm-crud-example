@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import BlogpostCard from '@/components/blogposts/BlogpostCard';
 import { client } from '@/lib/apolloClient';
 import useAuth from '@/hooks/useAuth';
@@ -6,6 +7,7 @@ import { GET_ALL_BLOGPOSTS } from '@/lib/blogposts/Queries';
 
 export default function Blogposts({ blogposts }) {
   const { user } = useAuth();
+  const [result, setResult] = useState('');
 
   const isAdministrator = Boolean(
     user?.capabilities?.includes('administrator')
@@ -25,7 +27,7 @@ export default function Blogposts({ blogposts }) {
             About the NextPress project
           </h1>
           <p className='text-left mt-5 text-gray-800 text-lg'>
-            The fictive use case for the NextPress #1 app is as follows: An
+            The fictive use-case for the NextPress app is the following: An
             administrator of a WordPress site maintains a blog written in
             Markdown. A group of people contributes to the blog with text
             snippets in Markdown format (see{' '}
@@ -47,11 +49,13 @@ export default function Blogposts({ blogposts }) {
               <button className='bg-gray-300 text-lg rounded-md py-2 px-4 mt-8 mb-2 cursor-default'>
                 Revalidate
               </button>
-              <p>(Only active for WP administrators)</p>
+              <p className='italic'>
+                Revalidation (On-Demand ISR) is only active for administrators
+              </p>
             </div>
           )}
         </section>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center mt-6'>
           <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-6 mb-6'>
             {blogposts &&
               blogposts.length > 0 &&
