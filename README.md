@@ -1,8 +1,8 @@
-This app is still in an early development phase.
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) for TypeScript
 
-To make use of this example code, or some parts of it, clone the repository or create the app from scratch as described below.
+The app is the first of two code examples making use of the two [Atlas Content Modeler(ACM) Plugin](https://wordpress.org/plugins/atlas-content-modeler/) on the WordPress site
+
+To make use of this example code, or some parts of it, clone the repository or create the app from scratch as described below whereupon you can copy the code you find relevant for your project from the components, hooks, lib and pages folders)
 
 ```code
 npx create-next-app@latest --ts nextpressatlas

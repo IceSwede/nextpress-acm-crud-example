@@ -4,7 +4,7 @@ export default function BlogpostCard({ blogpost }) {
   console.log('Blogpost small card: ', blogpost);
 
   return (
-    <div className='bg-white p-4 rounded-md my-3 border border-gray-300 shadow-md w-96'>
+    <div className='bg-white p-4 rounded-md my-3 border border-gray-300 shadow-md w-80 '>
       <div className='flex flex-col items-start justify-start mb-2'>
         <p className=' text-gray-500 '>
           By IceSwede | {blogpost.node.date.substr(0, 10)}

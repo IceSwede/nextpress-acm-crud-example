@@ -18,43 +18,59 @@ export default function Blogposts({ blogposts }) {
   };
 
   return (
-    <main className='bg-white my-3 md:my-6 md:rounded-lg'>
-      <section className='flex flex-col items-start justify-start py-12 px-12'>
-        <h1 className='text-2xl sm:text-4xl font-extrabold text-gray-800'>
-          About the NextPress project
-        </h1>
-        {isAdministrator ? (
-          <button onClick={() => revalidate()} className='np-button my-8'>
-            Revalidate
-          </button>
-        ) : (
-          <div>
-            <button className='bg-gray-300 text-lg rounded-md py-2 px-4 mt-8 mb-2'>
+    <div className='flex justify-center'>
+      <main className='bg-white my-3 md:my-6 md:rounded-lg max-w-3xl'>
+        <section className='flex flex-col items-start justify-start px-12 pt-12 pb-2'>
+          <h1 className='text-2xl sm:text-4xl font-extrabold text-gray-800'>
+            About the NextPress project
+          </h1>
+          <p className='text-left mt-5 text-gray-800 text-lg'>
+            The fictive use case for the NextPress #1 app is as follows: An
+            administrator of a WordPress site maintains a blog written in
+            Markdown. A group of people contributes to the blog with text
+            snippets in Markdown format (see{' '}
+            <span className='italic'>My notes</span> after logging in). The
+            contributors can see all contrbutions but only edit and delete their
+            own.
+          </p>
+          <p className='text-left mt-5 text-gray-800 text-lg'>
+            The blogposts below give furhter insigth into the code base and the{' '}
+            <span className='italic'>Notes</span> provide some additional
+            details.
+          </p>
+          {isAdministrator ? (
+            <button onClick={() => revalidate()} className='np-button my-8'>
               Revalidate
             </button>
-            <p>(Only active for WP administrators)</p>
-          </div>
-        )}
-      </section>
-      <div className='flex justify-center items-center'>
-        <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-6 mb-6'>
-          {blogposts &&
-            blogposts.length > 0 &&
-            blogposts.map((blogpost) => {
-              return (
-                <BlogpostCard key={blogpost.node.id} blogpost={blogpost} />
-              );
-            })}
+          ) : (
+            <div>
+              <button className='bg-gray-300 text-lg rounded-md py-2 px-4 mt-8 mb-2 cursor-default'>
+                Revalidate
+              </button>
+              <p>(Only active for WP administrators)</p>
+            </div>
+          )}
+        </section>
+        <div className='flex justify-center items-center'>
+          <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-6 mb-6'>
+            {blogposts &&
+              blogposts.length > 0 &&
+              blogposts.map((blogpost) => {
+                return (
+                  <BlogpostCard key={blogpost.node.id} blogpost={blogpost} />
+                );
+              })}
 
-          {!blogposts ||
-            (blogposts.length === 0 && (
-              <li>
-                <p>Oops, no posts found!</p>
-              </li>
-            ))}
-        </ul>
-      </div>
-    </main>
+            {!blogposts ||
+              (blogposts.length === 0 && (
+                <li>
+                  <p>Oops, no posts found!</p>
+                </li>
+              ))}
+          </ul>
+        </div>
+      </main>
+    </div>
   );
 }
 

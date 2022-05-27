@@ -6,7 +6,7 @@ export default function MyNoteCard({ mynote }) {
   const isUser = Boolean(user);
 
   return (
-    <div className='bg-white border-0 px-3 pt-3 rounded-md my-3 shadow-lg w-96 flex flex-col items-start justify-start mb-2'>
+    <div className='bg-white border-0 px-3 pt-3 rounded-md my-3 shadow-lg w-80 flex flex-col items-start justify-start mb-2'>
       <div className='container mx-auto flex items-center justify-end'>
         <p className='  text-gray-100 bg-gray-400 px-1 font-bold rounded-md'>
           {mynote.category}

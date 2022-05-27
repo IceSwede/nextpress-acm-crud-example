@@ -9,7 +9,7 @@ export default function Footer() {
         &copy; 2022 IceSwede (MIT Licence)
       </a>
       <a
-        href='https://github.com/IceSwede/nextpressatlas/discussions'
+        href='https://github.com/IceSwede/nextpress-acm-crud-example/discussions/'
         target='_blank'
         rel='noopener noreferrer'
         className='text-gray-900 hover:text-indigo-600 text-base sm:text-lg text-right'>
