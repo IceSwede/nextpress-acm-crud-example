@@ -9,6 +9,8 @@ export const GET_ALL_BLOGPOSTS = gql`
           slug
           title
           date
+          postLabel
+          postExcerpt
           author {
             node {
               username
@@ -40,6 +42,8 @@ export const GET_BLOGPOST_BY_SLUG = gql`
       slug
       title
       date
+      postLabel
+      postExcerpt
       author {
         node {
           username

@@ -7,7 +7,7 @@ export default function BlogpostCard({ blogpost }) {
     <div className='py-4 px-12 w-full'>
       <div className='flex flex-row bg-white border-2 rounded-lg border-gray-200 border-opacity-50 p-8'>
         <div className='hidden sm:inline-flex w-16 h-16 sm:mr-8 sm:mb-0 mb-4 items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0'>
-          <p>A1</p>
+          <p>{blogpost.node.postLabel}</p>
         </div>
         <div className='flex-grow'>
           <p className=' text-gray-500 '>
@@ -17,8 +17,7 @@ export default function BlogpostCard({ blogpost }) {
             {blogpost.node.name}
           </h2>
           <p className='leading-relaxed text-base'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {blogpost.node.postExcerpt}
           </p>
           <Link href={`/blogposts/${blogpost.node.slug}`}>
             <a className='mt-3 text-indigo-600 inline-flex items-center'>
