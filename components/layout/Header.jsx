@@ -38,7 +38,7 @@ export default function Header() {
             <>
               <li className='hidden md:inline cursor-pointer mr-3 hover:text-indigo-400'>
                 <Link href='/mynotes'>
-                  <a>My notes</a>
+                  <a>Private notes</a>
                 </Link>
               </li>
 
@@ -92,7 +92,7 @@ export default function Header() {
                 <>
                   <li className='my-2 mr-3 text-lg cursor-pointer hover:underline'>
                     <Link href='/mynotes'>
-                      <a onClick={() => setMenuOpen(false)}>My notes</a>
+                      <a onClick={() => setMenuOpen(false)}>Private notes</a>
                     </Link>
                   </li>
 

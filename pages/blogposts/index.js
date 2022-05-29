@@ -32,11 +32,12 @@ export default function Blogposts({ blogposts }) {
             Markdown. A group of people contributes to the blog with text
             snippets in Markdown format (see{' '}
             <span className='italic'>My notes</span> after logging in). The
-            contributors can see all contrbutions but only edit and delete their
-            own.
+            group members can see all contrbutions but only edit and delete
+            their own.
           </p>
           <p className='text-left mt-5 text-gray-800 text-lg'>
-            The blogposts below give furhter insigth into the code base and the{' '}
+            The <span className='italic'>Blogposts</span> below give furhter
+            insigth into the code base and the{' '}
             <span className='italic'>Notes</span> provide some additional
             details.
           </p>
@@ -60,9 +61,7 @@ export default function Blogposts({ blogposts }) {
             {blogposts &&
               blogposts.length > 0 &&
               blogposts.map((blogpost) => {
-                return (
-                  <BlogpostCard key={blogpost.node.id} blogpost={blogpost} />
-                );
+                return <BlogpostCard key={blogpost.id} blogpost={blogpost} />;
               })}
 
             {!blogposts ||
@@ -85,7 +84,21 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogposts: response?.data?.blogposts?.edges ?? [],
+      blogposts:
+        response?.data?.blogposts?.edges?.map((edge) => edge.node) || [],
     },
   };
 }
+
+/* Comment:
+The orginal "return" of the getStaticProps function was as follows:
+
+return {
+    props: {
+      blogposts: response?.data?.blogposts?.edges ?? [],
+    },
+  };
+
+The current version eliminates the need to include "node" before the blogpost's fieldname
+Example: Earlier it was blogpost.node.id, now it is blogpost.id
+*/
