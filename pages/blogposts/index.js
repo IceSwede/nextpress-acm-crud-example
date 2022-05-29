@@ -24,7 +24,7 @@ export default function Blogposts({ blogposts }) {
       <main className='bg-white my-3 md:my-6 md:rounded-lg max-w-3xl'>
         <section className='flex flex-col items-start justify-start px-12 pt-12 pb-2'>
           <h1 className='text-2xl sm:text-4xl font-extrabold text-gray-800'>
-            About the NextPress project
+            Blog - About NextPress
           </h1>
           <p className='text-left mt-5 text-gray-800 text-lg'>
             The fictive use-case for the NextPress app is the following: An
@@ -56,7 +56,7 @@ export default function Blogposts({ blogposts }) {
           )}
         </section>
         <div className='flex justify-center items-center mt-6'>
-          <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-6 mb-6'>
+          <ul className='grid grid-cols-1 gap-x-6 mb-6'>
             {blogposts &&
               blogposts.length > 0 &&
               blogposts.map((blogpost) => {

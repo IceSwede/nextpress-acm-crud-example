@@ -10,10 +10,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='container w-full flex justify-between items-center py-4 sm:py-6 border-b-2 mt-4'>
+    <header className='container w-full sticky top-0 bg-slate-50 z-50 flex justify-between items-center py-4 sm:py-6 border-b-2 mt-4'>
       {/* Left - Logo */}
+
       <Link href='/'>
-        <a className='font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-indigo-900 to-indigo-600'>
+        <a className='font-bold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-indigo-900 to-indigo-600'>
           NEXTPRESS
         </a>
       </Link>

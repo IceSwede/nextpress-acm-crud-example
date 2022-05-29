@@ -44,6 +44,7 @@ export default function SetPasswordForm({ resetKey: key, login }: Props) {
     }).catch((error) => {
       console.error(error);
     });
+    console.log('Set password completed');
   }
 
   function validate() {
@@ -126,7 +127,10 @@ export default function SetPasswordForm({ resetKey: key, login }: Props) {
           <Link href='/users/log-in'>
             <a className='text-indigo-600 hover:underline'>Login</a>
           </Link>{' '}
-          after setting the password
+          after setting the password{' '}
+          <span className='italic text-xs text-red-500 '>
+            (ToDo: Add auto-redirect)
+          </span>
         </p>
       </div>
     </div>

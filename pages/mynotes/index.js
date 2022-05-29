@@ -13,7 +13,7 @@ export default function MyNotes() {
       <main className='bg-white my-3 md:my-6 md:rounded-lg max-w-3xl '>
         <section className='flex flex-col items-start justify-start px-12 pt-12 pb-2'>
           <h1 className='text-2xl sm:text-4xl font-extrabold text-gray-800'>
-            Client-side rendering (CSR) and CRUD operations
+            Notes - CSR and CRUD Demo
           </h1>
           <p className='text-left mt-5 text-gray-800 text-lg'>
             This section is purely for demo purposes and the posts will be

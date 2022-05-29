@@ -185,8 +185,8 @@ export default function MynoteCrudForm({ mynote, user }) {
               <option value=''>Select...</option>
               <option value='Memo'>Memo</option>
               <option value='Todo'>ToDo</option>
-              <option value='Sources'>Sources</option>
-              <option value='Other'>Other</option>
+              <option value='Info'>Info</option>
+              <option value='Publ'>Publ</option>
             </select>
           </div>
           <div className='mb-4'>

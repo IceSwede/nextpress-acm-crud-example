@@ -11,7 +11,7 @@ const Hero = () => {
             Next.js App with Headless WordPress (Beta)
           </h2>
           <h1 className='text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6'>
-            Code example including CRUD operations
+            Example code for CRUD operations
           </h1>
         </div>
         <p className='text-gray-900 text-xl text-center mt-6 font-bold'>
@@ -93,13 +93,14 @@ const Hero = () => {
                     Statis-site generation
                   </h2>
                   <p className='leading-relaxed text-base'>
-                    Blazingly fast! The blog posts are created with Next.js
-                    getStaticProps and getStaticPaths, including the new
-                    (Next.js 12.1) On-demand Incremental Static Regeneration.
+                    Blazingly fast! The NextPress blogposts are created with
+                    Next.js getStaticProps and getStaticPaths. The static posts
+                    can be regenerated using the new (as of Next.js 12.1)
+                    On-Demand Incremental Static Regeneration (ISR).
                   </p>
                   <Link href='/blogposts'>
                     <a className='mt-3 text-indigo-600 inline-flex items-center'>
-                      See the Blog
+                      Visit the Blog
                       <svg
                         fill='none'
                         stroke='currentColor'
