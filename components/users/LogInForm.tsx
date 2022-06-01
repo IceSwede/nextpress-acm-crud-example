@@ -15,6 +15,7 @@ export default function LogInForm() {
   const [logIn, { loading, error }] = useMutation(LOG_IN, {
     refetchQueries: [{ query: GET_USER }],
   });
+  console.log(logIn);
   const errorMessage = error?.message || '';
   const isEmailValid =
     !errorMessage.includes('empty_email') &&
@@ -43,6 +44,10 @@ export default function LogInForm() {
     <div className='flex flex-col justify-start items-center mt-12'>
       <div className='bg-white shadow-md border border-gray-200 rounded-lg w-96 p-4 sm:p-6 lg:p-8 my-6'>
         <form className='space-y-6' method='post' onSubmit={handleSubmit}>
+          <p className='italic text-red-500'>
+            Obs, this works with Chrome and Firefox but not with default
+            settings in Safari (or any iOS browser )
+          </p>
           <fieldset disabled={loading} aria-busy={loading}>
             <label
               className='text-sm font-medium text-gray-900 block mb-2'
