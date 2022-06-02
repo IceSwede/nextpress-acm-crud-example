@@ -44,9 +44,9 @@ export default function LogInForm() {
     <div className='flex flex-col justify-start items-center mt-12'>
       <div className='bg-white shadow-md border border-gray-200 rounded-lg w-96 p-4 sm:p-6 lg:p-8 my-6'>
         <form className='space-y-6' method='post' onSubmit={handleSubmit}>
-          <p className='italic text-red-500'>
-            Obs, this works with Chrome and Firefox but not with default
-            settings in Safari (or any iOS browser )
+          <p className='italic text-gray-800'>
+            In Safari this only works if you disable{' '}
+            <span className='font-bold'>Prevent cross site tracking</span>
           </p>
           <fieldset disabled={loading} aria-busy={loading}>
             <label
