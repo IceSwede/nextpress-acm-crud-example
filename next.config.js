@@ -9,3 +9,9 @@ module.exports = {
     domains: ['nextpressatlas.wpengine.com'],
   },
 };
+
+module.exports = {
+  experimental: {
+    outputStandalone: true,
+  },
+};
