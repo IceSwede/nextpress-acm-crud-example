@@ -16,6 +16,7 @@ export default function LogInForm() {
     refetchQueries: [{ query: GET_USER }],
   });
   console.log(logIn);
+  console.log('Login on', process.env.NEXT_PUBLIC_WORDPRESS_API_URL);
   const errorMessage = error?.message || '';
   const isEmailValid =
     !errorMessage.includes('empty_email') &&

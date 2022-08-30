@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  appalexo:
+    image: iceswede/app-wpnextpresseu-arm64
+    container_name: appalexo-arm64
+    ports:
+      - 3000:3000
+    restart: unless-stopped
